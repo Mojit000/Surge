@@ -1,0 +1,41 @@
+#!name=Blued精简
+#!desc=精简Blued交友页面，删除交友页面聊天室内容
+#!author=Mojit000[https://github.com/Mojit000]
+#!system=ios
+#!requirement=CORE_VERSION>=20
+
+[Rule]
+# 移除开屏广告
+URL-REGEX,"^https?:\/\/(argo|social)\.blued\.cn\/blued\/splash\?",REJECT
+
+[Body Rewrite]
+http-response-jq ^https?:\/\/(argo|social)\.blued\.cn\/ticktocks\/users\/\d+\/explore\? '.extra.explore_list |= .[:-1]'
+http-response-jq ^https?:\/\/(argo|social)\.blued\.cn\/ticktocks\/users\/\d+? '.data |= map(select(.is_ads != 1))'
+http-response-jq ^https?:\/\/(argo|social)\.blued\.cn\/users\/.+\/more\/ios\? '.data[0] |= del(.banner, .healthy, .healthy_ad, .healthy_banner, .service)'
+http-response-jq ^https?:\/\/(argo|social)\.blued\.cn\/users\?birth_time 'delpaths([["extra","adms_user"]])'
+http-response-jq ^https?:\/\/(argo|social)\.blued\.cn\/users\?birth_time 'delpaths([["extra","adms_operating"]])'
+http-response-jq ^https?:\/\/(argo|social)\.blued\.cn\/users\?birth_time 'delpaths([["extra","nearby_dating"]])'
+http-response-jq ^https?:\/\/(argo|social)\.blued\.cn\/users\?birth_time 'delpaths([["extra","adms_activity"]])'
+http-response-jq ^https?:\/\/(argo|social)\.blued\.cn\/ticktocks\/users\/feed\/bubble 'delpaths([["data"]])'
+
+[Map Local]
+# 移除推荐页面顶部Banner
+^https?:\/\/(argo|social)\.blued\.cn\/blued\/explore data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 移除同城页面“泡泡他”
+^https?:\/\/(argo|social)\.blued\.cn\/ticktocks\/info\?bubble_state=&feed_ids=&filter=city data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 移除发现页面顶部Banner
+^https?:\/\/(argo|social)\.blued\.cn\/ticktocks\/discover\/recommend\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+# 精简：身边页面推荐直播
+^https?:\/\/(argo|social)\.blued\.cn\/users\/recommend data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/(argo|social)\.blued\.cn\/ticktocks\/popups\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/(argo|social)\.blued\.cn\/ticktocks\/users\/feed\/diversion\?filter data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+^https?:\/\/(argo|social)\.blued\.cn\/users\/live\/recommend\?ai_last_uid data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% argo.blued.cn, social.blued.cn
