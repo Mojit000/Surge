@@ -1,7 +1,6 @@
 #!name=给到商场精简
 #!desc=移除首页“热门精选”、“热门活动”、“热门商场”、“AI助手”，移除我的“广告”
 
-
 [Map Local]
 # 精简：首页“热门精选”
 ^https:\/\/gapi\.guanaitong\.com\/api\/v1\/home\/rec\? data-type=text data="{}" status-code=200
