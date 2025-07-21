@@ -1,10 +1,7 @@
 #!name=翻咔社区
 #!desc=保留直播热门标签；移除私信顶部匹配Banner；移除动态页面内的彩虹A+会员推荐、官方推送，精简动态页面内的热门；精简资料页面；精简主页，移除定制Tab
-#!author=Mojit000[https://github.com/Mojit000]
-#!icon=https://raw.githubusercontent.com/Mojit000/Loon/refs/heads/main/Finka/Finka.png
-#!openUrl=https://apps.apple.com/app/id898533490
-#!tag=页面精简
-#!homepage=https://github.com/luestr/ProxyResource/blob/main/README.md
+#!system=ios
+#!requirement=CORE_VERSION>=20
 
 [Body Rewrite]
 http-response-jq ^https:\/\/api\.finka\.cn\/recommend\/other 'delpaths([["data","liveList"]])'
@@ -14,7 +11,7 @@ http-response-jq ^https:\/\/api\.finka\.cn\/recommend\/live '.data.moduleList |=
 http-response-jq # ^https:\/\/api\.finka\.cn\/constants\/ios\? 'del(.data.splashAdNew, .data.activityView, .data.matchWebTabInfo, .data.adFeedParam, .data.prefetchResources)'
 http-response-jq ^https:\/\/api\.finka\.cn\/vas\/tool-box\/get\? '.data.list |= map(select(.trackName != "NEW_NEARBY" and .trackName != "MEET_REMINDER"))'
 http-response-jq ^https:\/\/api\.finka\.cn\/user\/recommend\?_t=\d+&multiInfo=1 '.data.list |= map(select(((.user.weight / ((.user.height / 100) * (.user.height / 100))) >= 18 and (.user.weight / ((.user.height / 100) * (.user.height / 100))) <= 27)))'
-http-response-jq ^https:\/\/api\.finka\.cn\/user\/recommend\?_t=\d+&multiInfo=1 '.data.list |= map(select(.user.age >= 27 and .user.age <= 42))'
+http-response-jq ^https:\/\/api\.finka\.cn\/user\/recommend\?_t=\d+&multiInfo=1 '.data.list |= map(select(.user.age >= 32 and .user.age <= 42))'
 http-response-jq ^https:\/\/api\.finka\.cn\/profile\/info\/v2\? 'del(.data.vasEntranceInfo,.data.featuredServicesList, .data.adMoreUrl, .data.ad, .data.valueEquityTopList, .data.profilePasterAd, .data.outFunctionList)'
 http-response-jq ^https:\/\/api\.finka\.cn\/profile\/info\/v2\? '.data.innerFunction[0] |= .[0:-1]'
 http-response-jq ^https:\/\/api\.finka\.cn\/feed\/v5\? 'del(.data.list[] | select(has("sponsorExtraInfo")))'
