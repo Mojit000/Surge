@@ -1,0 +1,12 @@
+#!name=MOJi系列
+#!desc=移除MOJi系列App推广信息
+#!system=ios
+#!requirement=CORE_VERSION>=20
+
+[Body Rewrite]
+http-response-jq ^https:\/\/api\.mojidict\.com\/parse\/functions\/resrcPos-fetchPublished "delpaths([["result"]])"
+http-response-jq ^https:\/\/api\.mojidict\.com\/app\/mojitest\/parse\/functions\/union-api "delpaths([["result","results","resrcPos-fetchPublished","result","data"]])"
+http-response-jq ^https:\/\/api\.mojidict\.com\/app\/mojiread\/parse\/functions\/start-page-recommend-list "delpaths([["result","result"]])"
+
+[MITM]
+hostname = %APPEND% api.mojidict.com

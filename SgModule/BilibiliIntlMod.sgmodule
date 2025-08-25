@@ -1,0 +1,15 @@
+#!name=BilibiliIntlMod
+#!desc=修改 Bilibili 国际版“我的”页面样式，删除“我的NFT”
+#!system=ios
+#!requirement=CORE_VERSION>=20
+
+[Body Rewrite]
+# > 修改Bilibili国际版“我的”页面布局
+http-response-jq ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/mine\? ".data.sections_v2[1].style = 1"
+http-response-jq ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/mine\? 'delpaths([["data","sections_v2",1,"title"]])'
+http-response-jq ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/mine\? 'delpaths([["data","sections_v2",1,"items",4]])'
+http-response-jq ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/mine\? "(.data.sections_v2[1].items) |= ([.[3], .[2]] + .[0:2])"
+
+[MITM]
+hostname = %APPEND% app.bilibili.com
+

@@ -1,0 +1,38 @@
+#!name=爱阅书香跳广告
+#!desc=卡广告领奖励,请开启MITM
+#!openUrl=https://t.me/aiyueshuxiangy
+#!homepage=https://t.me/aiyueshuxiangy
+#!date=2025-07-20 17:00:00
+#!system=ios
+
+[General]
+skip-proxy = %APPEND% api-access.pangolin-sdk-toutiao.com
+
+[Rule]
+DOMAIN,api-access.pangolin-sdk-toutiao.com,DIRECT
+DOMAIN,open.e.kuaishou.com,REJECT-NO-DROP
+DOMAIN,video-dsp.pddpic.com,REJECT-NO-DROP
+DOMAIN,log-api.pangolin-sdk-toutiao.com,REJECT-NO-DROP
+DOMAIN,log-api.pangolin-sdk-toutiao-b.com,REJECT-NO-DROP
+DOMAIN,ether-pack.pangolin-sdk-toutiao.com,REJECT-NO-DROP
+DOMAIN,mssdk-bu.bytedance.com,REJECT-NO-DROP
+DOMAIN,images.pinduoduo.com,REJECT-NO-DROP
+DOMAIN,ic.snssdk.com,REJECT-NO-DROP
+DOMAIN,log.snssdk.com,REJECT-NO-DROP
+DOMAIN,log-hl.snssdk.com,REJECT-NO-DROP
+DOMAIN,tnc3-aliec2.snssdk.com,REJECT-NO-DROP
+DOMAIN-SUFFIX,gdt.qq.com,REJECT-NO-DROP
+DOMAIN-SUFFIX,app-measurement.com,REJECT-NO-DROP
+DOMAIN-SUFFIX,umeng.com,REJECT-NO-DROP
+DOMAIN-SUFFIX,umengcloud.com,REJECT-NO-DROP
+DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT-NO-DROP
+DOMAIN-SUFFIX,ctobsnssdk.com,REJECT-NO-DROP
+DOMAIN-SUFFIX,ugdtimg.com,REJECT-NO-DROP
+DOMAIN-SUFFIX,doubleclick.net,REJECT-NO-DROP
+
+[Script]
+爱阅跳广告直接领取 = type=http-response, pattern=^https:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads.+, script-path=https://raw.githubusercontent.com/Mojit000/Surge/refs/heads/master/Script/iFreeTime.js, requires-body=true
+
+[MITM]
+hostname = %APPEND% api-access.pangolin-sdk-toutiao.com
+

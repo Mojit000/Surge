@@ -1,0 +1,105 @@
+#!name=Q-Search
+#!desc=Browser Search Add-ons
+
+# Q-Search 
+# From Neurogram (https://raw.githubusercontent.com/Neurogram-R/Surge/master/module/Q-Search.sgmodule)
+
+# - Safari 内输入 命令 + 空格 + 关键词 快速指定搜索引擎搜索
+
+#  注：先进入设置更改 Safari 默认搜索为 DuckDuckGO
+
+# 可自行修改指令或者添加搜索引擎
+
+
+[URL Rewrite]
+# >App内搜索
+# jd = 京东
+^https:\/\/duckduckgo.com\/\?q=jd(\+|%20)([^&]+).+ openjd://virtual?params={"des":"productList","keyWord":"$2","from":"search","category":"jump"} 302
+
+# tb = 淘宝
+^https:\/\/duckduckgo.com\/\?q=tb(\+|%20)([^&]+).+ taobao://s.taobao.com?q=$2 302
+
+# as = App Store
+^https:\/\/duckduckgo.com\/\?q=as(\+|%20)([^&]+).+ itms-apps://search.itunes.apple.com/WebObjects/MZSearch.woa/wa/search?media=software&term=$2 302
+
+# zdm = 什么值得买
+^https:\/\/duckduckgo.com\/\?q=zd(\+|%20)([^&]+).+ smzdm://search?json={"channelName":"home","search_type":"1","keyWord":"$2"} 302
+
+# pdd = 拼多多
+^https:\/\/duckduckgo.com\/\?q=dd(\+|%20)([^&]+).+ pinduoduo://com.xunmeng.pinduoduo/search_result.html?search_key=$2 302
+
+# cd = 词典
+^https:\/\/duckduckgo.com\/\?q=cd(\+|%20)([^&]+).+ dictionary2://define-$2 302
+
+# vt = v2ex
+^https:\/\/duckduckgo.com\/\?q=vt(\+|%20)([^&]+).+ v2er://search?query=$2 302
+
+# wb = 微博
+^https:\/\/duckduckgo.com\/\?q=wb(\+|%20)([^&]+).+ sinaweibo://searchall?q=$2 302
+
+# ＞社区
+
+# tw (Twitter)
+^https:\/\/duckduckgo.com\/\?q=tw\+([^&]+).+ https://twitter.com/search?q=$1 302
+
+# ssp: 少数派
+^https:\/\/duckduckgo.com\/\?q=ssp\+([^&]+).+ https://sspai.com/search/post/$1 302
+
+
+# > 购物
+
+# zdm: 什么值得买
+^https:\/\/duckduckgo.com\/\?q=zdm\+([^&]+).+ https://search.m.smzdm.com/?v=b&s=$1 302
+
+# jd : 京东
+^https:\/\/duckduckgo.com\/\?q=jd\+([^&]+).+ https://so.m.jd.com/ware/search.action?keyword=$1 302
+
+# tb: 淘宝
+^https:\/\/duckduckgo.com\/\?q=tb\+([^&]+).+ https://s.m.taobao.com/h5?q=$1 302
+
+# tm: 天猫
+^https:\/\/duckduckgo.com\/\?q=tm\+([^&]+).+ https://s.m.tmall.com/m/search.htm?q=$1 302
+
+
+# ＞视频资源
+
+# bli (哔哩哔哩) 
+^https:\/\/duckduckgo.com\/\?q=bli\+([^&]+).+ https://m.bilibili.com/search?keyword=$1 302
+
+# ytb  (YouTube)
+^https:\/\/duckduckgo.com\/\?q=ytb\+([^&]+).+ https://www.youtube.com/results?search_query=$1 302
+
+# ph  (PornHub) 
+^https:\/\/duckduckgo.com\/\?q=ph\+([^&]+).+ https://cn.pornhub.com/video/search?search=$1 302
+
+
+# ＞网盘
+
+# gd  (Google Drive)
+^https:\/\/duckduckgo.com\/\?q=gd\+([^&]+).+ https://www.google.com/search?q=%22Google+Drive%22+$1 302
+
+# tgd  (t.me/gdurl 搜索 Google Drive 资源)
+^https:\/\/duckduckgo.com\/\?q=tgd\+([^&]+).+ https://t.me/s/gdurl?q=$1 302
+
+# zgd  (https://zhao.pp.ua 搜索 Google Drive 资源)
+^https:\/\/duckduckgo.com\/\?q=zgd(\+|%20)([^&]+).+ https://zhao.pp.ua/?q=$2 302
+
+
+# ＞默认搜索
+
+# bd: 百度
+^https:\/\/duckduckgo.com\/\?q=bd\+([^&]+).+ https://www.baidu.com/s?wd=$1 302
+
+# ddg: DuckDuckGo 
+^https:\/\/duckduckgo.com\/\?q=ddg\+([^&]+).+ https://duckduckgo.com/?ia=about&q=$1 302
+
+# bz：标准查询
+^https:\/\/duckduckgo.com\/\?q=bz\+([^&]+).+ https://std.samr.gov.cn/search/std?q=$1 302
+
+# 无指令: 谷歌
+^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
+
+
+[MITM]
+hostname = %APPEND% duckduckgo.com
+
