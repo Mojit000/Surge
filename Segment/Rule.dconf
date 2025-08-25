@@ -1,0 +1,94 @@
+[Rule]
+RULE-SET,"Rules/Surge_ Rule_Reject.txt",REJECT
+# > Anti-AD去广告（可以屏蔽大部分广告）
+DOMAIN-SET,https://anti-ad.net/surge2.txt,ℝ𝕖𝕛𝕖𝕔𝕥,extended-matching #!IOS-ONLY
+# 京东去广告
+URL-REGEX,^http:\/\/\w{32}\.jddebug\.com\/diagnose\?,REJECT
+IP-CIDR6,2402:db40:5100:1011::5/128,REJECT,no-resolve
+IP-CIDR,101.124.19.122/32,REJECT,no-resolve
+DOMAIN,dns.jd.com,REJECT
+# 移除京东开屏广告
+URL-REGEX,^https:\/\/m\.360buyimg\.com\/mobilecms\/s(?:1125x2436|1080x1920),REJECT
+# > 防止TG加载转圈
+OR,((IP-CIDR,0.0.0.0/32), (IP-CIDR,95.161.76.100/31)),ℝ𝕖𝕛𝕖𝕔𝕥,pre-matching
+# > 修复微信发不了照片
+DOMAIN-SUFFIX,tc.qq.com,DIRECT,extended-matching
+# > 微信公众号及小程序去广告
+DOMAIN-SUFFIX,wxs.qq.com,ℝ𝕖𝕛𝕖𝕔𝕥,extended-matching #!IOS-ONLY
+# > 移除PikPak在当前地区不可用的提示
+DOMAIN,access.mypikpak.com,🍀𝔾𝕝𝕠𝕓𝕒𝕝
+# > Rull-Set集合
+RULE-SET,"Rules/Surge_ Rule_Direct.txt",DIRECT
+RULE-SET,"Rules/Surge_ Rule_Proxy.txt",🍀𝔾𝕝𝕠𝕓𝕒𝕝
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PikPak/PikPak.list,𝔻 𝕚 𝕣𝕖 𝕔 𝕥
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaASN/ChinaASN.list,𝔻 𝕚 𝕣𝕖 𝕔 𝕥,no-resolve
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMaxNoIP/ChinaMaxNoIP_All.list,𝔻 𝕚 𝕣𝕖 𝕔 𝕥,extended-matching,no-resolve
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list,🍀𝔾𝕝𝕠𝕓𝕒𝕝
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OpenAI/OpenAI.list,"🤖𝔸𝕀 𝕊𝕖𝕣𝕧𝕚𝕔𝕖"
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list,🎨𝕐𝕠𝕦𝕋𝕦𝕓𝕖
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Spotify/Spotify.list,🎵𝕊𝕡𝕠𝕥𝕚𝕗𝕪
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PayPal/PayPal.list,𝔸𝕞𝕖𝕣𝕚𝕔𝕒
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TikTok/TikTok.list,🎬𝔼𝕞𝕓𝕪 #!IOS-ONLY
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list,🐳𝕋𝕨𝕚𝕥𝕥𝕖𝕣 #!IOS-ONLY
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list,🍀𝔾𝕝𝕠𝕓𝕒𝕝
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Proxy/Proxy.list,🍀𝔾𝕝𝕠𝕓𝕒𝕝,extended-matching
+# > App应用
+DOMAIN-SUFFIX,duolingo.cn,🎓𝔻𝕦𝕠𝕝𝕚𝕟𝕘𝕠 #!IOS-ONLY
+DOMAIN-SUFFIX,duolingo.com,🎓𝔻𝕦𝕠𝕝𝕚𝕟𝕘𝕠 #!IOS-ONLY
+USER-AGENT,DuolingoMobile,🎓𝔻𝕦𝕠𝕝𝕚𝕟𝕘𝕠 #!IOS-ONLY
+DOMAIN-SUFFIX,appraven.net,🍀𝔾𝕝𝕠𝕓𝕒𝕝 #!IOS-ONLY
+# > BT站点
+DOMAIN-SUFFIX,btdig.com,🍀𝔾𝕝𝕠𝕓𝕒𝕝
+DOMAIN-SUFFIX,bt4g.org,🍀𝔾𝕝𝕠𝕓𝕒𝕝
+DOMAIN-SUFFIX,bt4gprx.com,🍀𝔾𝕝𝕠𝕓𝕒𝕝
+DOMAIN-SUFFIX,katcr.to,🍀𝔾𝕝𝕠𝕓𝕒𝕝
+DOMAIN-KEYWORD,kickass,🍀𝔾𝕝𝕠𝕓𝕒𝕝
+DOMAIN-SUFFIX,downloadtorrentfile.com,𝔻 𝕚 𝕣𝕖 𝕔 𝕥
+# > ✈️订阅
+URL-REGEX,*subscribe?token*,🍀𝔾𝕝𝕠𝕓𝕒𝕝
+# 纯想Space
+DOMAIN-SUFFIX,chunxiang.space,𝔻 𝕚 𝕣𝕖 𝕔 𝕥
+DOMAIN-SUFFIX,onyra.cc,🎬𝔼𝕞𝕓𝕪 // Onyra Emby
+# 哪吒云Emby（端口号：443）
+DOMAIN,kfc.v50.su,𝔻 𝕚 𝕣𝕖 𝕔 𝕥
+DOMAIN,emby.v50.su,𝔻 𝕚 𝕣𝕖 𝕔 𝕥
+DOMAIN-SUFFIX,v50.su,🎬𝔼𝕞𝕓𝕪
+# > 云海 Emby
+DOMAIN,emby.oceancloud.asia,🎬𝔼𝕞𝕓𝕪
+# > Zox Emby
+DOMAIN-SUFFIX,zox.show,🎬𝔼𝕞𝕓𝕪
+# > 莉利娅Emby（直连，端口号：80）
+DOMAIN,jp.lilyemby.my,𝔻 𝕚 𝕣𝕖 𝕔 𝕥
+# > 莉利娅Emby（直连，端口号：443）
+DOMAIN,hk.lilyemby.my,𝔻 𝕚 𝕣𝕖 𝕔 𝕥
+# > 莉利娅Emby（CDN，端口号：443）
+DOMAIN,cdn.lilyemby.my,🎬𝔼𝕞𝕓𝕪
+# > 莉利娅Emby（海外，端口号：443）
+DOMAIN,cf.lilyemby.my,🎬𝔼𝕞𝕓𝕪
+# > 69云Emby（端口号：443）
+DOMAIN-SUFFIX,69yun69.com,🎬𝔼𝕞𝕓𝕪
+# > 微斯人Emby（CF路线，端口号：443）
+DOMAIN,tv.ash.yt,🎬𝔼𝕞𝕓𝕪
+# > 微斯人Emby（SG中转，端口号：13524）
+DOMAIN,ashtv.huajia.xyz,🎬𝔼𝕞𝕓𝕪
+# > MiCu Emby（端口号：443）
+# DOMAIN-SUFFIX,media.micu.hk,🎬𝔼𝕞𝕓𝕪
+# > MiCu Emby（端口号：443）
+# DOMAIN-SUFFIX,micu.hk,𝔻 𝕚 𝕣𝕖 𝕔 𝕥
+# > 流星Emby（直连，端口号：44279）
+# DOMAIN,emby.060618.me,𝔻 𝕚 𝕣𝕖 𝕔 𝕥
+# DOMAIN-SUFFIX,liustar.click,𝔻 𝕚 𝕣𝕖 𝕔 𝕥
+# > 流星Emby（CDN，端口号：443）
+# DOMAIN,embyhw2.liustar.click,🎬𝔼𝕞𝕓𝕪
+# > Sub Store
+DOMAIN-SUFFIX,vercel.app,🍀𝔾𝕝𝕠𝕓𝕒𝕝
+# > 防止应用循环请求
+IP-CIDR,0.0.0.0/32,REJECT,no-resolve
+# 剩余未匹配的国内网站
+DOMAIN-SUFFIX,cn,𝔻 𝕚 𝕣𝕖 𝕔 𝕥
+DOMAIN-KEYWORD,-cn,𝔻 𝕚 𝕣𝕖 𝕔 𝕥
+# > 其它
+RULE-SET,SYSTEM,𝔻 𝕚 𝕣𝕖 𝕔 𝕥
+RULE-SET,LAN,𝔻 𝕚 𝕣𝕖 𝕔 𝕥
+GEOIP,CN,𝔻 𝕚 𝕣𝕖 𝕔 𝕥
+FINAL,🍀𝔾𝕝𝕠𝕓𝕒𝕝,dns-failed

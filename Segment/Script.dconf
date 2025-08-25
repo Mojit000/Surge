@@ -1,0 +1,3 @@
+[Script]
+# 捷径切换策略
+捷径策略切换 = type=http-request,pattern=^http:\/\/nobyda\.policy,requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Shortcuts/PolicySwitch.js,max-size=0,script-update-interval=0 #!IOS-ONLY
