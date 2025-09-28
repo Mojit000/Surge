@@ -1,0 +1,22 @@
+{
+  "name": "Mojit0",
+  "description": "自用的Emby服务器图标集合",
+  "icons": [
+    {
+      "name": "69",
+      "url": "https://raw.githubusercontent.com/Mojit000/Surge/refs/heads/master/icon/Emby/69.png"
+    },
+    {
+      "name": "69Cloud",
+      "url": "https://raw.githubusercontent.com/Mojit000/Surge/refs/heads/master/icon/Emby/69Cloud.jpeg"
+    },
+    {
+      "name": "Ash",
+      "url": "https://raw.githubusercontent.com/Mojit000/Surge/refs/heads/master/icon/Emby/Ash.jpeg"
+    },
+    {
+      "name": "KFC",
+      "url": "https://raw.githubusercontent.com/Mojit000/Surge/refs/heads/master/icon/Emby/KFC.jpeg"
+    }
+  ]
+}
