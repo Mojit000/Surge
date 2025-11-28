@@ -1,0 +1,19 @@
+# NAME: Surge_ Rule_Proxy.list
+
+# ✈️订阅
+URL-REGEX,*subscribe?token*
+DOMAIN-SUFFIX, ash.do
+# Sub Store
+DOMAIN-SUFFIX,vercel.app
+# AppRaven
+DOMAIN-SUFFIX,appraven.net
+# BT站点
+DOMAIN-SUFFIX,btdig.com
+DOMAIN-SUFFIX,bt4g.org
+DOMAIN-SUFFIX,bt4gprx.com
+DOMAIN-SUFFIX,katcr.to
+DOMAIN-KEYWORD,kickass
+# Others
+DOMAIN,apple-bing.sbs
+DOMAIN-SUFFIX,instapaper.com
+DOMAIN-SUFFIX,samfrew.com

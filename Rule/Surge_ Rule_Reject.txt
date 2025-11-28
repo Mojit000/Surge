@@ -1,0 +1,22 @@
+# NAME: Surge_ Rule_Reject.list
+# 京东去广告
+# URL-REGEX,^http:\/\/\w{32}\.jddebug\.com\/diagnose\?
+# IP-CIDR6,2402:db40:5100:1011::5/128
+# IP-CIDR,101.124.19.122/32
+# DOMAIN,dns.jd.com
+# 移除京东开屏广告
+# URL-REGEX,^https:\/\/m\.360buyimg\.com\/mobilecms\/s(?:1125x2436|1080x1920)
+
+# 防止淘宝切屏一段时间后重新打开出现开屏广告
+DOMAIN,heic.alicdn.com
+DOMAIN-SUFFIX,h-adashx.ut.taobao.com
+# 屏蔽WeChat热更新
+DOMAIN,dl.wechat.com
+DOMAIN,dldir1.qq.com
+DOMAIN,dldir1v6.qq.com
+# 防止TG加载转圈
+OR,((IP-CIDR,0.0.0.0/32), (IP-CIDR,95.161.76.100/31))
+# 微信公众号及小程序去广告
+# DOMAIN-SUFFIX,wxs.qq.com
+# 防止应用循环请求
+IP-CIDR,0.0.0.0/32

@@ -1,0 +1,19 @@
+# 手动规则: 以下规则优先级最高 不参与规则数量统计
+
+# 修复微信发不了照片
+DOMAIN-SUFFIX,tc.qq.com
+# 纯想Space
+DOMAIN-SUFFIX,chunxiang.space
+# BT4G
+DOMAIN-SUFFIX,downloadtorrentfile.com
+# 1Password
+DOMAIN-SUFFIX,1password.com
+DOMAIN-SUFFIX,1passwordusercontent.com
+DOMAIN-SUFFIX,1passwordservices.com
+DOMAIN-SUFFIX,agilebits.com
+# Blackmagic Cloud
+DOMAIN-KEYWORD,blackmagic 
+DOMAIN-SUFFIX,bdjuhe.com
+DOMAIN-SUFFIX,dingtalk.com
+DOMAIN-SUFFIX,musicool.cn
+PROCESS-NAME,/Applications/Enpass.app/

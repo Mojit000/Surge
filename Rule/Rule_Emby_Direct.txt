@@ -1,0 +1,12 @@
+# NAME: Rule_Emby_Direct.list
+# POLICY: Direct
+
+# 哪吒Emby
+DOMAIN,kfc.v50.su
+DOMAIN,emby.v50.so
+
+# 莉利娅Emby（直连，端口号：444）
+DOMAIN,cdn.lilyemby.my
+
+# QianMe媒体库
+DOMAIN-SUFFIX,qmeng.top

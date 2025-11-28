@@ -1,0 +1,31 @@
+# NAME: Rule_Emby_Proxy.list
+# POLICY: Proxy
+
+# Onyra Emby（端口号：443）
+DOMAIN-SUFFIX,onyra.cc
+
+# 哪吒云Emby（端口号：443）
+DOMAIN-SUFFIX,v50.su
+
+# 云海 Emby（端口号：443）
+DOMAIN,emby.oceancloud.asia
+
+# Zox Emby（端口号：443）
+DOMAIN-SUFFIX,zox.show
+
+# 莉利娅Emby（海外，端口号：443）
+DOMAIN,cf.lilyemby.my
+
+# 69云Emby（端口号：443）
+DOMAIN-SUFFIX,69yun69.com
+
+# 微斯人Emby（CF路线，端口号：443）
+DOMAIN-SUFFIX,tv.ash.yt
+# 微斯人Emby（SG中转，端口号：13524）
+DOMAIN,ashtv.huajia.xyz
+
+# MiCu Emby（端口号：443）
+DOMAIN-SUFFIX,micu.hk
+
+#  Poly（端口号：443）
+DOMAIN,yunti.online
