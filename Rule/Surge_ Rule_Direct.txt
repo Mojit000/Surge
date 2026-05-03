@@ -13,7 +13,17 @@ DOMAIN-SUFFIX,1passwordservices.com
 DOMAIN-SUFFIX,agilebits.com
 # Blackmagic Cloud
 DOMAIN-KEYWORD,blackmagic 
+# 大家的日本语
+DOMAIN,ilovelang.com
+# BD影视
 DOMAIN-SUFFIX,bdjuhe.com
+# 钉钉（海外版）
 DOMAIN-SUFFIX,dingtalk.com
+# Others
 DOMAIN-SUFFIX,musicool.cn
-PROCESS-NAME,/Applications/Enpass.app/
+DOMAIN-SUFFIX,onejailbreak.com
+DOMAIN,dldir1v6.qq.com
+DOMAIN-SUFFIX,nssurge.com
+DOMAIN-SUFFIX,dailyedu.com
+DOMAIN,dldir1.qq.com
+PROCESS-NAME,/Applications/115Browser.app/
