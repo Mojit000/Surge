@@ -17,3 +17,6 @@ DOMAIN-KEYWORD,kickass
 DOMAIN,apple-bing.sbs
 DOMAIN-SUFFIX,instapaper.com
 DOMAIN-SUFFIX,samfrew.com
+DOMAIN-SUFFIX,cloudflare.com
+DOMAIN-SUFFIX,gumroad.com
+DOMAIN-SUFFIX,threads.com
