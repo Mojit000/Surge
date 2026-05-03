@@ -1,4 +1,4 @@
-# NAME: Surge_ Rule_Proxy.list
+# NAME: Surge_Rule_Proxy.list
 
 # ✈️订阅
 URL-REGEX,*subscribe?token*
