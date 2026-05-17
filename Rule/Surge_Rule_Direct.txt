@@ -1,7 +1,6 @@
 # 手动规则: 以下规则优先级最高 不参与规则数量统计
 
 # 修复微信发不了照片
-DOMAIN-SUFFIX,tc.qq.com
 # 纯想Space
 DOMAIN-SUFFIX,chunxiang.space
 # BT4G
@@ -22,6 +21,7 @@ DOMAIN-SUFFIX,dingtalk.com
 # Others
 DOMAIN,dldir1.qq.com
 DOMAIN,dldir1v6.qq.com
+DOMAIN-SUFFIX,tc.qq.com
 DOMAIN-SUFFIX,musicool.cn
 DOMAIN-SUFFIX,nssurge.com
 DOMAIN-SUFFIX,dailyedu.com
