@@ -7,12 +7,12 @@ DOMAIN-SUFFIX,chunxiang.space
 # BT4G
 DOMAIN-SUFFIX,downloadtorrentfile.com
 # 1Password
-DOMAIN-SUFFIX,1password.com
-DOMAIN-SUFFIX,1passwordusercontent.com
-DOMAIN-SUFFIX,1passwordservices.com
 DOMAIN-SUFFIX,agilebits.com
+DOMAIN-SUFFIX,1password.com
+DOMAIN-SUFFIX,1passwordservices.com
+DOMAIN-SUFFIX,1passwordusercontent.com
 # Blackmagic Cloud
-DOMAIN-KEYWORD,blackmagic 
+DOMAIN-KEYWORD,blackmagic
 # 大家的日本语
 DOMAIN,ilovelang.com
 # BD影视
@@ -20,10 +20,9 @@ DOMAIN-SUFFIX,bdjuhe.com
 # 钉钉（海外版）
 DOMAIN-SUFFIX,dingtalk.com
 # Others
-DOMAIN-SUFFIX,musicool.cn
-DOMAIN-SUFFIX,onejailbreak.com
+DOMAIN,dldir1.qq.com
 DOMAIN,dldir1v6.qq.com
+DOMAIN-SUFFIX,musicool.cn
 DOMAIN-SUFFIX,nssurge.com
 DOMAIN-SUFFIX,dailyedu.com
-DOMAIN,dldir1.qq.com
-PROCESS-NAME,/Applications/115Browser.app/
+DOMAIN-SUFFIX,onejailbreak.com
