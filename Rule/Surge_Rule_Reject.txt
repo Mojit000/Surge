@@ -10,10 +10,6 @@
 # 防止淘宝切屏一段时间后重新打开出现开屏广告
 DOMAIN,heic.alicdn.com
 DOMAIN-SUFFIX,h-adashx.ut.taobao.com
-# 屏蔽WeChat热更新
-DOMAIN,dl.wechat.com
-DOMAIN,dldir1.qq.com
-DOMAIN,dldir1v6.qq.com
 # 防止TG加载转圈
 OR,((IP-CIDR,0.0.0.0/32), (IP-CIDR,95.161.76.100/31))
 # 微信公众号及小程序去广告
