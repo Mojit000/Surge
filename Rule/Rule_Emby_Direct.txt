@@ -6,3 +6,4 @@ DOMAIN,vip.qmeng.top
 
 # SNTP
 DOMAIN,s3.array2026.com
+DOMAIN-SUFFIX,nginxlily.cyou
