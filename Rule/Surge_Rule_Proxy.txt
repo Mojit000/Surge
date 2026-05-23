@@ -2,7 +2,7 @@
 
 # ✈️订阅
 URL-REGEX,*subscribe?token*
-DOMAIN-SUFFIX, ash.do
+DOMAIN-SUFFIX,ash.do
 # Sub Store
 DOMAIN-SUFFIX,vercel.app
 # AppRaven
@@ -20,3 +20,4 @@ DOMAIN-SUFFIX,samfrew.com
 DOMAIN-SUFFIX,cloudflare.com
 DOMAIN-SUFFIX,gumroad.com
 DOMAIN-SUFFIX,threads.com
+DOMAIN-SUFFIX,v50.su
