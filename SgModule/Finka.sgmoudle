@@ -1,5 +1,6 @@
 #!name=翻咔社区
 #!desc=保留直播热门标签；移除私信顶部匹配Banner；移除动态页面内的彩虹A+会员推荐、官方推送，精简动态页面内的热门；精简资料页面；精简主页，移除定制Tab
+#!category=去广告
 #!system=ios
 #!requirement=CORE_VERSION>=20
 
