@@ -19,6 +19,7 @@ DOMAIN-SUFFIX,bdjuhe.com
 # 钉钉（海外版）
 DOMAIN-SUFFIX,dingtalk.com
 # Others
+DOMAIN-KEYWORD,dl-a10b-
 DOMAIN,dldir1.qq.com
 DOMAIN,dldir1v6.qq.com
 DOMAIN-SUFFIX,tc.qq.com

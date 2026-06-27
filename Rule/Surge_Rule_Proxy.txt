@@ -21,3 +21,4 @@ DOMAIN-SUFFIX,cloudflare.com
 DOMAIN-SUFFIX,gumroad.com
 DOMAIN-SUFFIX,threads.com
 DOMAIN-SUFFIX,v50.su
+DOMAIN-SUFFIX,okcoin.com
