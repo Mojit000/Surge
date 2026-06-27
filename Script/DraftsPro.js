@@ -4,6 +4,8 @@ Drafts Pro
 
 https://t.me/ddgksf2013
 
+updated time: 2026-06-28
+
 [rewrite_local]
 ^https?:\/\/backend\.getdrafts\.com\/api\/v\d\/verification url script-response-body https://raw.githubusercontent.com/Mojit000/Surge/refs/heads/master/Script/DraftsPro.js
 
