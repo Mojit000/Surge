@@ -5,7 +5,7 @@ Drafts Pro
 https://t.me/ddgksf2013
 
 [rewrite_local]
-^https?:\/\/backend\.getdrafts\.com\/api\/v\d\/verification url script-response-body https://ddgksf2013.top/scripts/drafts.vip.js
+^https?:\/\/backend\.getdrafts\.com\/api\/v\d\/verification url script-response-body https://raw.githubusercontent.com/Mojit000/Surge/refs/heads/master/Script/DraftsPro.js
 
 
 [mitm]
