@@ -9,7 +9,7 @@ https://t.me/ddgksf2021
     
 [rewrite_local]
 
-^https?:\/\/.*v2ex\.com\/(?!(.*(api|login|cdn-cgi|verify|auth|captch|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mov|m4v|avi|mkv|flv|rmvb|wmv|rm|asf|asx|mp3|json|ico|otf|ttf))))) url script-response-body https://ddgksf2013.top/scripts/v2ex.ads.js
+^https?:\/\/.*v2ex\.com\/(?!(.*(api|login|cdn-cgi|verify|auth|captch|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mov|m4v|avi|mkv|flv|rmvb|wmv|rm|asf|asx|mp3|json|ico|otf|ttf))))) url script-response-body https://raw.githubusercontent.com/Mojit000/Surge/refs/heads/master/Script/V2EXNoAD.js
 ^https?:\/\/pagead.*googlesyndication\.com\/pagead url reject-200
 ^https?:\/\/.*v2ex\.com\/pro\/emitter url reject-200
 
