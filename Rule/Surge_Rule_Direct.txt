@@ -27,3 +27,4 @@ DOMAIN-SUFFIX,musicool.cn
 DOMAIN-SUFFIX,nssurge.com
 DOMAIN-SUFFIX,dailyedu.com
 DOMAIN-SUFFIX,onejailbreak.com
+DOMAIN-SUFFIX,highlyopinionated.co
