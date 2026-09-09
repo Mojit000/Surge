@@ -13,6 +13,8 @@ DOMAIN-SUFFIX,bt4g.org
 DOMAIN-SUFFIX,bt4gprx.com
 DOMAIN-SUFFIX,katcr.to
 DOMAIN-KEYWORD,kickass
+# UpNote
+DOMAIN-SUFFIX,getupnote.com
 # Others
 DOMAIN,apple-bing.sbs
 DOMAIN-SUFFIX,instapaper.com
