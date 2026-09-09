@@ -14,6 +14,8 @@ DOMAIN-SUFFIX,1passwordusercontent.com
 DOMAIN-KEYWORD,blackmagic
 # 大家的日本语
 DOMAIN,ilovelang.com
+# koofr网盘
+DOMAIN-SUFFIX,app.koofr.net
 # BD影视
 DOMAIN-SUFFIX,bdjuhe.com
 # 钉钉（海外版）
