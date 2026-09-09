@@ -1,6 +1,9 @@
 # NAME: Rule_Emby_Proxy.list
 # POLICY: Proxy
 
+# 守候网络
+DOMAIN,server3.cn2gias.uk
+
 # Onyra Emby（端口号：443）
 DOMAIN-SUFFIX,onyra.cc
 
@@ -31,9 +34,6 @@ DOMAIN,yunti.online
 # 莉利娅Emby
 DOMAIN-SUFFIX,lilyemby.com
 DOMAIN,cfstream.lilyya.top
-
-# 守候网络
-DOMAIN,server3.cn2gias.uk
 
 # Pornhub
 DOMAIN,tv.000115.xyz
