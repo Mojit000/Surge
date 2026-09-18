@@ -7,7 +7,7 @@ function operator(proxies) {
     .map(p => {
       if (p.type === 'hysteria2') {
         // 强制修正为你在 [Proxy] 测试通过的正确密码
-        p['salamander-password'] = 'SwyxR9HQIfP58zeu';
+        p['salamander-password'] = 'HDRyvYLlV5DYW7xi';
         p['block-quic'] = true;
       }
       return p;
