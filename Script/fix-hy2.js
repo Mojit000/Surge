@@ -1,15 +1,12 @@
-// fix-hy2.js
-// 作用：过滤伪节点，并将所有 Hy2 节点的混淆密码统一修正为正确的 SwyxR9HQIfP58zeu
-
+// clean_hy2.js
 function operator(proxies) {
-  return proxies
-    .filter(p => !p.name.includes("套餐") && !p.name.includes("剩余"))
-    .map(p => {
-      if (p.type === 'hysteria2') {
-        // 强制修正为你在 [Proxy] 测试通过的正确密码
-        p['salamander-password'] = 'HDRyvYLlV5DYW7xi';
-        p['block-quic'] = true;
-      }
-      return p;
-    });
+  return proxies.map(p => {
+    // 强制将原始订阅里的 obfs-password 赋值给 Surge 识别的 salamander-password
+    if (p['obfs-password']) {
+      p['salamander-password'] = p['obfs-password'];[span_0](start_span)[span_0](end_span)
+    }
+    // 补全跳过证书验证，防止策略组 TLS 校验失败
+    p['skip-cert-verify'] = true;
+    return p;
+  });
 }
